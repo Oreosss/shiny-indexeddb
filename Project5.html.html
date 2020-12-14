@@ -1,0 +1,95 @@
+<!--
+Author: Oreoluwa Olukotun
+Class: CS316 
+About: Bootstrap Project
+Resorces Used: - Stack Overflow
+               - W3Schools
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Math Tutor</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+  </head>
+
+  <body onload="initDB();">
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner"> 
+              <h1  class="ml1 masthead-brand" >
+                <span class ="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters"> Mystery Answer </span>
+                  <span class="line line2"></span>
+                </span>
+              </h1>
+            </div>
+        </div>
+      
+          <div class="inner cover">
+           <div id="shadow">
+              <form class="lead"  id="myForm" onsubmit="runningTable(); return false;" autocomplete="off">
+                </div>
+                <div class="inner " >
+                    <div id="shadow" >
+                    <input type="text" id ="question"  class="form-control"  placeholder="Enter your question" >
+                    <div id="wrapper">
+                      <label for="yes_no_radio">Do you wish to provide an answer ?</label>
+                      <p>
+                    <input type="radio" name="yes_no" id = "yes_no" value = "Yes" onclick= "generateInput();"> Yes </input>
+                    <input type="radio" name="yes_no" id = "yes_no" value = "No" onclick = "deleteInput();"> No </input>
+                    </p>
+                    </div>
+                    </div>
+                <p class="lead">
+                <input type="submit" id="formSubmit"  class="btn btn-md btn-secondary"/> 
+                </p>   
+              </form>
+            <div id="shadow">
+                <input type="text" id ="answer" class="form-control" placeholder="Answer appears here" >
+            </div>  
+        </div>
+        </div>
+        <p class="lead">
+        <button id="refresh" class="btn btn-md btn-secondary" onclick= "clearDatabase();">Clear Database</button>
+        <button id="refresh" class="btn btn-md btn-secondary" onclick= "Refresh()">Refresh Page</button>
+        </p>
+            <div class="mastfoot center">
+              <canvas id="myCanvas" width="200" height="100" ></canvas>  
+            </div>
+    </div>
+    </div>
+  </div>
+          <script src="indexeddb.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+      <!--Form Submit-->
+      
+
+  </body>
+</html>
+
